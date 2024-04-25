@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" />
+	<title>Astronomy Pic of the Day</title>
+	<style type="text/css">
+		body {
+			background-color: black;
+		}
+
+		.pic {
+			border: 0px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 10px;
+		}
+	</style>
+</head>
+<body onload="loadDoc()">
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<div id="pic">
+		<img id="hdurl" class="pic" />
+	</div>
+	<p>&nbsp;</p>
+	<script>
+		function loadDoc() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var data = JSON.parse(this.responseText);
+					document.getElementById("hdurl").src = data.hdurl;
+				}
+			};
+			xhttp.open("GET", "https://api.nasa.gov/planetary/apod?api_key=UBsxwpDyGaKnzfrxDit6uizPXdB7vJfa26rEMmHd", true);
+			xhttp.send();
+		}
+	</script>
+</body>
+</html>
