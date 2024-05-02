@@ -3,6 +3,4 @@ Astropic is a leightweight HTML & Javascript site that displays NASA's Astronomy
 
 ** NOTE - this site requires a valid NASA api key, to obtain a key visit api.nasa.gov. **
 
-This site uses inlince CSS which you may modify however you life. To start using the site replace <your key here> found under the <script> tag. Deploy html file to web server of your webserver * enjoy a frosty beverage of your choice!
-
-Enjoy the stars!!
+This site uses inline CSS which you may modify however you like. To start using the site replace <your key here> found under the <script> tag. Deploy html file to your webserver/host and enjoy the stars!!
